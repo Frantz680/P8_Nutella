@@ -1,0 +1,55 @@
+{%  extends 'template_base.html' %}
+
+{% block title %}PurBeurre{% endblock %}
+
+{% block contenu %}
+
+  <!--Top of page-->
+  <header>
+      <div id="title">Mieux manger, c'est important.</div>
+  </header>
+
+  <!--Contained-->
+  <div id="content">
+      
+      <div id="cases_title">Comment ça marche ?</div>
+
+      <div id="cases"> 
+          <div id="case1">
+              <p> 
+                  1. Choisissez un produit que vous voulez de meilleur qualité.
+              </p>
+              <img src="/static/image/nutella.png" alt="nutella" WIDTH=175 HEIGHT=175/>
+          </div>
+          <div id="case2">
+              <p>    
+                  2. Rentrer ce produit dans le barre de cherche situer en bas.
+              </p>
+              <img src="/static/image/loading.png" alt="loading" WIDTH=400 HEIGHT=300/>
+          </div>
+          <div id="case3">
+              <p> 
+                  3. Le site va vous proposer un produit de substitue de meilleur qualité.
+              </p>
+              <img src="/static/image/nocciolata.png" alt="nocciolata" WIDTH=175 HEIGHT=175/>
+          </div>
+          <div id="case4">
+              <p> 
+                  4. Connectez-vous pour sauvegarder le substitue dans votre espace ou alors inscrivez vous. 
+              </p>
+              <img src="/static/image/se-connecter.png" alt="connexion" WIDTH=350 HEIGHT=175/>
+          </div>
+      </div>
+  </div>
+
+  <div id="search">
+      <input class="input" type="text" id="str_user" value=""
+                      placeholder="Ecrivez ici le produit">
+  </div>
+
+  <!--Footer-->
+  <footer>
+
+  </footer>
+
+{% endblock %}
