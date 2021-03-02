@@ -2,4 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def dashboard(request):
-    return render(request, "pubeurre/index.html")
+    return render(request, "index.html")
+
+def connexion(request):
+    return render(request, "connexion.html")
