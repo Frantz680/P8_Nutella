@@ -1,0 +1,14 @@
+{%  extends 'template_base.html' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block contenu %}
+    <div id="content">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+{% endblock %}
