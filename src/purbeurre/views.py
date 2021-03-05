@@ -1,8 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
-# Create your views here.
-def dashboard(request):
-    return render(request, "index.html")
 
-def connexion(request):
-    return render(request, "connexion.html")
+def utilisateurs_views(request):
+    # return render(request, "connexion.html")
+    return render(request, 'utilisateurs/mon_compte.html')
+
