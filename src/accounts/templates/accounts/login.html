@@ -1,4 +1,4 @@
-{%  extends 'template_base.html' %}
+{% extends 'template_base.html' %}
 
 {% block title %}Connexion{% endblock %}
 
@@ -12,10 +12,11 @@
                 {{ form.as_p }}
                 <input type="submit" value="Login">
                 <div>
-                    Vous avez déjà un compte? <a href="{% url 'registrer' %}">Inscription</a>
+                    Vous n'avez pas encore un compte? <a href="{% url 'register' %}">Inscrivez-vous</a>
                 </div>
-            </form>        
+            </form>
         </div>
     </div>
 </header>
+
 {% endblock %}
