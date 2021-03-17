@@ -1,10 +1,20 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from purbeurre.models import Category_product
+import requests, json
 
-from django.contrib.auth.decorators import login_required
+# Create your views here.
+def home(request):
 
+    return render(request, "index.html")
 
-@login_required
-def utilisateurs_views(request):
-    # return render(request, "connexion.html")
-    return render(request, 'utilisateurs/mon_compte.html')
+def api(request):
+    if 'str_user' in request.GET:
+        name = request.GET['name']
+        print(name)
+        url = \
+        'https://fr.openfoodfacts.org/langue/francais/categories.json'
 
+        category_json = json.loads(requests.get(url).text)
+
+        for counter in range(50):
+            Category_product.objects.create(category_json["tags"][counter]["name"])

@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
-from purbeurre.views import utilisateurs_views
+from purbeurre.views import home
+
 
 urlpatterns = [
-    path('', utilisateurs_views, name='mon_compte'),
+    path('', home, name='home'),
+    path('accounts/', include('accounts.urls')),
 ]
