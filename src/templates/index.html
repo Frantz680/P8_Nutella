@@ -16,10 +16,21 @@
                 <p class="text-white-75 font-weight-light mb-5">
                 <h2>Trouvez un produit de substitution pour ceux que vous consommez tous les jours.</h2>
                 </p>
-                <from method="GET">
-                    <input class="form-control me-2" placeholder="Produit" type="text" name="str_user"><button
-                        class="btn btn-outline-success" type="submit">Chercher</button>
+                <from action="{% url 'search' %}" method="get">
+                    <div class="input-group-append">
+                        <input class="form-control me-2" placeholder="Produit" type="text" name="search_user">
+                        <button class="btn btn-secondary" type="submit">Chercher</button>
+                    </div>
                 </from>
+                <div class="container my-auto">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                      {{ message }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                  </div>
             </div>
         </div>
     </div>

@@ -3,24 +3,40 @@
 {% block title %}PurBeurre{% endblock %}
 
 {% block contenu %}
-
-<!--Top of page-->
-<header class="masthead">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">Du gras, oui, mais de qualité !</h1>
-                <hr class="divider my-4" />
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 font-weight-light mb-5">
-                <h2>Trouvez un produit de substitution pour ceux que vous consommez tous les jours.</h2>
-                </p>
-                <input class="form-control me-2" type="search" placeholder="Produit" aria-label="Search" id="str_user" value=""><button
-                    class="btn btn-outline-success" type="submit">Chercher</button>
-            </div>
-        </div>
+<header class="smallheader text-center text-white d-flex" style="background: 50% 75% no-repeat url('{{image}}') ">
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+          <strong>{{ title }}</strong>
+          <br>
+          <strong>Le nutri-score de ce produit est {{ nutri }}</strong>
+        </h1>
+      </div>
     </div>
+  </div>
 </header>
 
+<!--Top of page-->
+<section>
+  <div class="container">
+    <div class="col-md-18 text-center">
+      <h2 class="section-heading">Vous pouvez remplacer cet aliment par :</h2>
+  
+      {% for name_product in alt_products %}
+      <div class="card product-card">
+        <div class="product-card-badge">
+          <span class="product-nutrigrade badge badge--{{ name_product.nutrition_grade }}">{{ name_product.nutrition_grade }}</span>
+            
+        </div>
+        <div class="product-card-img" style="background-image: url('{{name_product.picture_product}}')"><br></div>
+        <div class="card-body">
+          <h4 class="card-title product-card-title">{{ name_product.name_product }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock %}
+
