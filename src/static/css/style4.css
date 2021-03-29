@@ -65,9 +65,6 @@ header
     color: rgb(253, 253, 253);
 }
 
-
-/*SEARCH*/
-
 .input
 {
     font-size: 23px;
@@ -83,3 +80,49 @@ header
     height: 10%;
     width: 20%;
 }
+
+/*SEARCH*/
+
+.row{
+    height: 600px;
+}
+
+.product-card{
+    width: 18rem; 
+    float: left; 
+    margin: 50px 40px;
+}
+  
+.product-card-img{
+    height: 270px;
+    width: auto;
+    background: transparent no-repeat center;
+    background-size: cover;
+}
+   
+.product-card-title{
+    height: 120px;
+}
+  
+.product-detail-img{
+    margin: 20px 40px;
+}
+  
+.product-card-badge{
+    position: absolute;
+    left: 250px;
+    top:-20px
+}
+
+.product-nutrigrade{
+    width: 50px; 
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    padding-top: 20px;
+    color: white;
+    border-radius: 50%;
+    background-color: #ee4b28;
+}
+  

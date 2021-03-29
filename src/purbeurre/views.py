@@ -1,20 +1,43 @@
-from django.shortcuts import render
-from purbeurre.models import Category_product
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
+
 import requests, json
 
-# Create your views here.
+from purbeurre.models import Category_product, Name
+
+
 def home(request):
 
     return render(request, "index.html")
 
-def api(request):
-    if 'str_user' in request.GET:
-        name = request.GET['name']
-        print(name)
-        url = \
-        'https://fr.openfoodfacts.org/langue/francais/categories.json'
 
-        category_json = json.loads(requests.get(url).text)
+def search(request):
 
-        for counter in range(50):
-            Category_product.objects.create(category_json["tags"][counter]["name"])
+    search_user = request.GET.get('search_user')
+    print("ok", search_user)
+
+    try:
+        product = Name.objects.filter(name_product=search_user).first()
+        substitutes = Name.objects.filter(category=product.category, nutrition_grade__lt=product.nutrition_grade).order_by("nutrition_grade")
+
+        paginator = Paginator(substitutes, 6)
+        page = request.GET.get('page')
+        alt_products = paginator.get_page(page)
+
+        context = {
+        	'alt_products': alt_products,
+        	'paginate': True,
+            'title': search_user,
+            'image': product.picture_product,
+            'nutri': product.nutrition_grade,
+        }
+
+    except AttributeError:
+        messages.warning(request, "Ce produit n'existe pas. Vérifiez l'orthographe de la recherche")
+        return redirect('home')
+
+    return render(request, 'search.html', context)
+
+
+

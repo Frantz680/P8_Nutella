@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UserForm
+from .forms import RegisterForm
 
 
 @login_required
@@ -10,20 +10,15 @@ def utilisateurs_views(request):
     return render(request, 'utilisateurs/mon_compte.html')
 
 
-"""def registrer_views(request):
-    form = User()
-    return render(request, 'accounts/registrer.html', {'form': form})"""
-
-def register(request):
+def registrer_views(request):
     if request.method == 'POST':
-        form = UserForm(request.POST)
+        form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            name = form.cleaned_data.get('name')
+            username = form.cleaned_data.get('username')
             messages.success(request, 'Votre compte a été crée avec succès.')
-            return redirect('src:home')
+            return redirect('home')
     else:
-        form = UserForm()
-
+        form = RegisterForm()
 
     return render(request, 'accounts/register.html', {'form': form})
