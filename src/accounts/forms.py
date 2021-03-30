@@ -5,9 +5,9 @@ from django.forms import ModelForm
 
 
 class LoginForm(AuthenticationForm):
-    username = forms.CharField(label="Username", widget=forms.TextInput(attrs={'class': 'form-control',
+    username = forms.CharField(label="Nom d'utilisateur", widget=forms.TextInput(attrs={'class': 'form-control',
     }))
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control',
+    password = forms.CharField(label='Mot de passe', widget=forms.PasswordInput(attrs={'class': 'form-control',
     }))
 
 

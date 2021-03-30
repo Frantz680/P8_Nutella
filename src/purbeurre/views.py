@@ -11,6 +11,8 @@ def home(request):
 
     return render(request, "index.html")
 
+def ml(request):
+    return render(request, "mentions_legales.html")
 
 def search(request):
 
@@ -39,5 +41,16 @@ def search(request):
 
     return render(request, 'search.html', context)
 
+def detail(request, product):
 
+    product_detail = Name.objects.get(name_product=product)
+
+    context_detail = {
+        'name': product_detail.name_product,
+        'title': 'Informations supplémentaires',
+        'nutri': product_detail.nutrition_grade,
+        'nutrition_image': product_detail.picture_product,
+    }
+
+    return render(request, 'detail.html', context_detail)
 
