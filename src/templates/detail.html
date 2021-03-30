@@ -1,0 +1,20 @@
+{% extends 'template_base.html' %}
+
+{% block title %}PurBeurre{% endblock %}
+
+{% block contenu %}
+<header class="smallheader text-center text-white d-flex" style="background: 50% 75% no-repeat url('{{image}}') ">
+    <div class="container my-auto">
+        <div class="row-search">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase">
+                    <strong>{{ title }}</strong>
+                    <br>
+                    <strong>Le nutri-score de ce produit est {{ nutri }}</strong>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

@@ -54,55 +54,6 @@ class Command(BaseCommand):
                 except IntegrityError:
                     pass
 
-    """url = 
-        'https://fr.openfoodfacts.org/langue/francais/categories.json'
-
-    category_json = json.loads(requests.get(url).text)
-    product_name = ""
-    product_url = ""
-    product_shop = ""
-    product_nutrition = ""
-
-    def request_category(self):
-        
-       
-       
-
-        for counter in range(50):
-            self.name_category = self.category_json["tags"][counter]["name"]
-            Category_product.objects.create(name_category=self.name_category)
-        
-        self.request_food()
-
-    def request_food(self):
-
-        for category in range(50 + 1):
-            category_choice_json = self.category_json["tags"][category - 1]
-
-            answer_category_json = json.loads(
-                requests.get(category_choice_json["url"] + ".json").text)
-
-            for product in answer_category_json["products"]:
-
-                try:
-                    name_product = product["product_name"]
-                    nutrition_grade = product["nutrition_grades"]
-                    picture_product = product['image_front_url']
-                    picture_nutrition = product["image_nutrition_small_url"]
-                    url_product = product["url"]
-
-                    Name.objects.create(name_product=name_product, category = self.name_category, nutrition_grade=nutrition_grade,
-                                       url_product=url_product, picture_product= picture_product, picture_nutrition=picture_nutrition)
-
-                except KeyError:
-                    pass
-
-                except DataError:
-                    pass
-
-                except IntegrityError:
-                    pass"""
-                
 
     def handle(self, *args, **options):
         self.request_category()
