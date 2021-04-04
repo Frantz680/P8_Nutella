@@ -171,6 +171,47 @@ body
     color: rgb(245, 107, 69);
 }
 
+/*DETAIL.HTML*/
+
+#detail_nutri_score
+{
+    height: 120px;
+    width: auto;
+    margin: 20px 20px;
+}
+
+#detail_nutri
+{
+    height: 200px;
+    width: auto;
+    margin: 20px 20px;
+}
+
+/*MY_ACCOUNT.HTML*/
+/*HEADER*/
+
+#header_my_account
+{
+    height: 500px;
+}
+
+/*INFORMATION_ACCOUNT*/
+
+#div_information_account
+{
+    font-size: 20px;
+}
+
+#title_info_account
+{
+    color: rgb(245, 107, 69);
+}
+
+#title_products_save
+{
+    color: rgb(245, 107, 69);
+}
+
 /*SECTION*/
 
 #title_substitut
@@ -225,8 +266,6 @@ body
     border-radius: 50%;
     background-color: #ee4b28;
 }
-
-
 
 #search_product{
     background-color: grey;

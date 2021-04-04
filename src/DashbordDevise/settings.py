@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'DashbordDevise.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
-        'NAME': 'purbeurre2', # le nom de notre base de donnees creee precedemment
+        'NAME': 'purbeurre', # le nom de notre base de donnees creee precedemment
         'USER': 'postgres', # attention : remplacez par votre nom d'utilisateur
         'PASSWORD': '741852',
         'HOST': 'localhost',
