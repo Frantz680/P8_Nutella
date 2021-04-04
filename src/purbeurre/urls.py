@@ -8,5 +8,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('mentions_legal/', ml, name='ml'),
     path('search/', search, name='search'),
-    path('detail/<str:product_id>/', detail, name='detail'),
+    path('detail/<str:substitut_detail>/', detail, name='detail'),
 ]

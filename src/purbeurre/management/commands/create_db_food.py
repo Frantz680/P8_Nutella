@@ -12,7 +12,7 @@ class Command(BaseCommand):
     class is used for information retrieval in the API.
     """
 
-    CATEGORIES = ['Viandes', 'Poissons', 'Epicerie', 'Chocolats', 'Pates-a-tartiner', 'Biscuits',  'Vins', 'Boissons-gazeuses', 'Yaourts', 'Pains', 'Glace', 'Fromages-de-france', 'Pizzas', 'Snacks sucrés']
+    CATEGORIES = ['Biscuits', 'Chocolats', 'Viandes', 'Poissons', 'Epicerie',  'Pates-a-tartiner',   'Vins', 'Boissons-gazeuses', 'Yaourts', 'Pains', 'Glace', 'Fromages-de-france', 'Pizzas', 'Snacks sucrés']
     def request_category(self):
 
         for category in self.CATEGORIES:

@@ -41,15 +41,17 @@ def search(request):
 
     return render(request, 'search.html', context)
 
-def detail(request, product):
+def detail(request, substitut_detail):
 
-    product_detail = Name.objects.get(name_product=product)
+    product_detail = Name.objects.get(id=substitut_detail)
 
     context_detail = {
-        'name': product_detail.name_product,
-        'title': 'Informations supplémentaires',
+        'title_page': 'Informations supplémentaires',
+        'title': product_detail.name_product,
         'nutri': product_detail.nutrition_grade,
-        'nutrition_image': product_detail.picture_product,
+        'image': product_detail.picture_product,
+        'image_nutri': product_detail.picture_nutrition,
+        'url': product_detail.url_product,
     }
 
     return render(request, 'detail.html', context_detail)
