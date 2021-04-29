@@ -29,7 +29,8 @@ def search(request):
     categories and post them on the page.
     """
 
-    search_user = request.GET.get('search_user')
+    search = request.GET.get('search_user')
+    search_user = search.capitalize()
 
     try:
         product = Name.objects.filter(name_product=search_user).first()
@@ -54,8 +55,7 @@ def search(request):
         messages.warning(request,
                          "Ce produit est introuvable. "
                          "Vérifiez l'orthographe de la "
-                         "recherche. Il manque peut-être "
-                         "la majuscule.")
+                         "recherche.")
         return redirect('home')
 
     return render(request, 'search.html', context)
