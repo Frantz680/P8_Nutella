@@ -9,7 +9,7 @@ class Category_product(models.Model):
 class Name(models.Model):
     name_product = models.CharField(max_length=250, unique=True)
     category = models.ForeignKey(
-        Category_product, on_delete=models.CASCADE, default='None')
+    Category_product, on_delete=models.CASCADE, default='None')
     nutrition_grade = models.CharField(default='E', max_length=1)
     picture_product = models.URLField(default='None')
     picture_nutrition = models.URLField(default='None')
