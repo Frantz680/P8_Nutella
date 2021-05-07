@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'yql82pk5&#_7%6-y--4dc@&t%gvxzm29tr5%s(-8)p3&g9l+m-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if os.environ.get('ENV') == 'PRODUCTION' else True
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "purbeurre68.herokuapp.com"]
+ALLOWED_HOSTS = ["46.101.115.45"]
 
 # Application definition
 
@@ -136,10 +136,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 
 # Authentication
 LOGIN_REDIRECT_URL = 'home'

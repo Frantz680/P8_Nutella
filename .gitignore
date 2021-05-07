@@ -4,3 +4,4 @@ __pycache__
 .pytest_cache
 staticfiles
 selenium
+DashbordDevise/settings/production.py
