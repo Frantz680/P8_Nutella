@@ -7,7 +7,10 @@ branches:
   only:
     - staging
 
-before_script:
+before_install:
+  - python -m pip install --upgrade pip
+
+install:
   - pip install -r requirements.txt
 
 env: DJANGO_SETTINGS_MODULE="DashbordDevise.settings.travis"
@@ -17,4 +20,3 @@ services:
 
 script:
   - python manage.py test
-  
