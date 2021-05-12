@@ -38,3 +38,4 @@ class UserFormTest(StaticLiveServerTestCase):
         # submit form
         submit.click()
         time.sleep(1)
+        self.selenium.quit()
