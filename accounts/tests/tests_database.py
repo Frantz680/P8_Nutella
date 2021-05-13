@@ -21,7 +21,7 @@ class DataTests(TestCase):
         response = self.client.get(reverse('search'), {
             'search_user': pomme,
         })
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
 
     def test_search_302(self):
         pomme = str('pomme_pas_bon')

@@ -1,4 +1,4 @@
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+"""from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 from selenium import webdriver
 
@@ -13,7 +13,7 @@ class UserFormTest(StaticLiveServerTestCase):
 
     def setUp(self):
         self.selenium = webdriver.Chrome(
-            executable_path=str('accounts/tests/chromedriver.exe'),
+            executable_path=str('accounts/tests/chromedriver'),
             options=chrome_options, )
         self.selenium.implicitly_wait(30)
         self.selenium.maximize_window()
@@ -38,3 +38,5 @@ class UserFormTest(StaticLiveServerTestCase):
         # submit form
         submit.click()
         time.sleep(1)
+        self.selenium.quit()
+"""
