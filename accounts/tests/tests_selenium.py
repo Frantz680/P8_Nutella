@@ -13,7 +13,7 @@ class UserFormTest(StaticLiveServerTestCase):
 
     def setUp(self):
         self.selenium = webdriver.Chrome(
-            executable_path=str('accounts/tests/chromedriver'),
+            executable_path=str('accounts/tests/chromedriver.exe'),
             options=chrome_options, )
         self.selenium.implicitly_wait(30)
         self.selenium.maximize_window()
