@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
     'jquery',
     'purbeurre',
     'accounts.apps.AccountsConfig',
@@ -137,3 +138,7 @@ STATIC_URL = '/static/'
 
 # Authentication
 LOGIN_REDIRECT_URL = 'home'
+
+CRONJOBS = [ 
+    ('0 15 * * FRI', 'P8_NUTELLA.cron') 
+]
