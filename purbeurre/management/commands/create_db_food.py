@@ -64,5 +64,13 @@ class Command(BaseCommand):
                 except IntegrityError:
                     pass
 
+    def delete_tables(self):
+        """
+        I delete the data of all the tables. 
+        """
+        Category_product.objects.all().delete()
+        Name.objects.all().delete()
+
     def handle(self, *args, **options):
+        self.delete_tables()
         self.request_category()
