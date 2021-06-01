@@ -1,4 +1,4 @@
-"""from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 from selenium import webdriver
 
@@ -39,4 +39,3 @@ class UserFormTest(StaticLiveServerTestCase):
         submit.click()
         time.sleep(1)
         self.selenium.quit()
-"""
