@@ -87,7 +87,7 @@ DATABASES = {
         'USER': "frantz",
         # attention : remplacez par votre nom d'utilisateur
 
-        'PASSWORD':  "741852963",
+        'PASSWORD':  "741852",
     }
 }
 
