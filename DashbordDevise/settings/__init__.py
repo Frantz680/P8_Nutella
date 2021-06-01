@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': "purbeurre",
         # le nom de notre base de donnees creee precedemment
 
-        'USER': "frantz",
+        'USER': "postgres",
         # attention : remplacez par votre nom d'utilisateur
 
         'PASSWORD':  "741852",
