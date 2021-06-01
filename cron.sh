@@ -5,4 +5,5 @@ export DB_USER="frantz"
 export DB_PASSWORD="741852963"
 
 cd /home/frantz/disquaire/
-/home/frantz/disquaire/python3 /home/frantz/disquaire/manage.py create_db_food
+source /home/frantz/disquaire/.venv/bin.activate
+python3 /home/frantz/disquaire/manage.py create_db_food
