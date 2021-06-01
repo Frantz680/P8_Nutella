@@ -81,13 +81,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         # on utilise l'adaptateur postgresql
 
-        'NAME': "purbeurre",
+        'NAME': os.getenv('DB_NAME'),
         # le nom de notre base de donnees creee precedemment
 
-        'USER': "postgres",
+        'USER': os.getenv('DB_USER'),
         # attention : remplacez par votre nom d'utilisateur
 
-        'PASSWORD':  "741852",
+        'PASSWORD':  os.getenv('DB_PASSWORD'),
     }
 }
 
