@@ -25,7 +25,7 @@ SECRET_KEY = 'yql82pk5&#_7%6-y--4dc@&t%gvxzm29tr5%s(-8)p3&g9l+m-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["46.101.115.45"]
+ALLOWED_HOSTS = ["46.101.115.45", "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_crontab',
     'jquery',
     'purbeurre',
     'accounts.apps.AccountsConfig',
@@ -82,13 +81,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         # on utilise l'adaptateur postgresql
 
-        'NAME': 'purbeurre',
+        'NAME': os.getenv('DB_NAME'),
         # le nom de notre base de donnees creee precedemment
 
-        'USER': 'postgres',
+        'USER': os.getenv('DB_USER'),
         # attention : remplacez par votre nom d'utilisateur
 
-        'PASSWORD': '741852',
+        'PASSWORD':  os.getenv('DB_PASSWORD'),
     }
 }
 
@@ -138,7 +137,3 @@ STATIC_URL = '/static/'
 
 # Authentication
 LOGIN_REDIRECT_URL = 'home'
-
-CRONJOBS = [ 
-    ('0 15 * * FRI', 'P8_NUTELLA.cron') 
-]

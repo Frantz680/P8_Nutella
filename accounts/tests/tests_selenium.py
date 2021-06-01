@@ -1,4 +1,4 @@
-"""from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 from selenium import webdriver
 
@@ -6,6 +6,7 @@ import time
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('window-size=1920x1080')
+chrome_options.add_argument('--headless')
 
 
 # Create your tests here.
@@ -39,4 +40,3 @@ class UserFormTest(StaticLiveServerTestCase):
         submit.click()
         time.sleep(1)
         self.selenium.quit()
-"""
