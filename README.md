@@ -9,7 +9,7 @@ Cette application est deployeur sur [DigitalOcean](https://www.digitalocean.com/
 
 **Veux-tu voir le site ?**
 
-[Voici le lien](http://46.101.115.45/)
+[Voici le lien de DigitalOcean](http://46.101.115.45/)
 
 -----------------
 
@@ -24,7 +24,7 @@ Cette application permettra à quiconque de manger mieux, en cherchant vos produ
 
 **Veux-tu voir le site ?**
 
-[Voici le lien](https://purbeurre68.herokuapp.com/)
+[Voici le lien de heroku](https://purbeurre68.herokuapp.com/)
 
 Je vais te donner quelques produits pour que tu essaies:
 - Nuttela
