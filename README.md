@@ -1,4 +1,20 @@
-P8_Nutella
+**P8_Nutella 
+**V2.0.0
+
+-----------------
+
+**Deployer cette application sur un hebergeur**
+
+Cette application est deployeur sur [DigitalOcean](https://www.digitalocean.com/)
+
+**Veux-tu voir le site ?**
+
+[Voici le lien](http://46.101.115.45/)
+
+-----------------
+
+**P8_Nutella 
+**V1.0.0
 
 -----------------
 
