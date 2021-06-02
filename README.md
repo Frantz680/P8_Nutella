@@ -1,5 +1,5 @@
-**P8_Nutella 
-**V2.0.0
+**P8_Nutella**
+**V2.0.0**
 
 -----------------
 
@@ -13,8 +13,8 @@ Cette application est deployeur sur [DigitalOcean](https://www.digitalocean.com/
 
 -----------------
 
-**P8_Nutella 
-**V1.0.0
+**P8_Nutella**
+**V1.0.0**
 
 -----------------
 
